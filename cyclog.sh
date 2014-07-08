@@ -13,7 +13,7 @@ tday=$(date +%Y%m%d)
 
 
 source  ~/.cyclog.conf
-cd $rlpath
+cd $clpath
 
 # read entries
 if [[ $1 = r ]]; then

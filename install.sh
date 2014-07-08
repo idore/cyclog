@@ -31,6 +31,7 @@ echo "uname=$uname" >> $HOME/.cyclog.conf
 echo "rlpath=$rlpath" >> $HOME/.cyclog.conf
 echo "editor=$editor" >> $HOME/.cyclog.conf
 echo "browser=$browser" >> $HOME/.cyclog.conf
+mkdir $rpath
 
 read -p "Will you use the redmatrix plugin? (y/n)" rplug
 if [[ $rplug = y ]]; then

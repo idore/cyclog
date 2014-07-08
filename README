@@ -1,0 +1,67 @@
+cyclog.sh - a personal cycling log keeper in bash
+by tony baldwin 
+released according to GPL v. 3
+http://tonyb.us/cyclog
+v. 0.1
+
+cyclog allows you to track the distances, times, and paces, of
+your cycling workouts. 
+I found that there are practically no options for training logs
+or workout tracking for users of Free Software and GNU/Linux.
+Well, now there's one.
+
+cyclog can be used to track cycling, walking, etc., as well,
+I suppose.
+
+Installation: run the install script.
+It moves stuff into place, creates a config file.
+Easy-peasy.
+
+Usage:
+cyclog - creates a new cyclog entry.
+cyclog e filename - opens log entry with filename for editing.
+cyclog v filename - opens log entry with filename for viewing.
+cyclog d filename - delete cyclog file with filename.
+cyclog r - reads all entries (cats all files in the dir, pipes to less), can be limited to date parameters
+cyclog r yyyymmdd - reads entries from date yyyymmdd. One can specify just yyyymm, or just yyyy, even.
+cyclog l - lists all cyclog entries. Like r, it can be narrowed down with date parameters.
+cyclog s searchterm - searches for searchterm in ride entries.
+cyclog mo yyyymm - gives a monthly report for month yyyymm 
+cyclog yr yyyy - gives a yearly report for year yyyy (such as cyclog yr 2013)
+cyclog h - displays this help message.
+
+REPORTS: 
+Yearly and monthly reports will give statistics for
+Total no. of workouts
+Total distance
+Total time
+Average distance/workout
+Average pace
+for the time period chosen, to date.
+You can run a yearly report at any point in the year,
+of course, and receive data up to that point for the year.
+Likewise for a month.
+You can run the report again, later, and receive updated
+data, of course.
+
+Dates: 
+use YYYYMMDD, such as 20130504 for May the Fourth, 2013,
+or 201206 for June 2012.
+
+TIMES: 
+ALWAYS enter the full time, including hours, as in HH:MM:SS,
+even for short rides, under an hour.
+i.e., for a 45 minute 30 second ride, enter
+00:45:30
+for your ride time.
+Otherwise, the math will be all wrong.
+
+This is the initial release, and rather rudimentary.
+Bear with me (or hack away and submit a push request!)
+
+REDMATRIX POSTING:
+cyclog comes with an option to post your run logs to your redmatrix channel.
+What is redmatrix? see https://redmatrix.me
+
+./tony
+http://tonyb.us/cyclog

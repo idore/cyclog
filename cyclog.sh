@@ -44,7 +44,7 @@ TIMES: Enter time, including hours HH:MM:SS, even if you are doing short rides, 
 i.e. for a 23minute 15second ride: 00:23:15
 Otherwise the math will be all wrong.
 REPORTS: yearly and monthly reports will give you data for
-Total no. of workouts, total distance, total time, average distance, average page
+Total no. of workouts, total distance, total time, average distance, average pace
 for the time period in question, to date.
 -------------------------------------
 cyclog is released according to GPL v. 3"

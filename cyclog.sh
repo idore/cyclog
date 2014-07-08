@@ -190,8 +190,8 @@ if [[ $rplug = y ]]; then
 	let snet=twit=fb=dw=lj=ij=tum=wp=lt=pp=0
 	read -p "Post to Red? (y/n) " post
 	if [[ $post = y ]]; then
-		echo -e "#fitness #cycling\nposted with cyclog - http://tonyb.us/cyclog\n----------------\n" >> $rlpath/$filedate.ride
-		ud="$(cat $rlpath/$filedate.ride)"
+		echo -e "#fitness #cycling\nposted with cyclog - http://tonyb.us/cyclog\n----------------\n" >> $clpath/$filedate.ride
+		ud="$(cat $clpath/$filedate.ride)"
 		title="$uname's cyclog"
 		# read -p "Will you be crossposting to other networks? (y/n) " xpo
 		# if [[ $xpo == y ]]; then

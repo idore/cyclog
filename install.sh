@@ -34,6 +34,7 @@ if [[ $(echo $edit) ]]; then
 fi
 read -p "What is your prefered web browser? (i.e. /usr/bin/iceweasel) " browser
 echo "uname=$uname" >> $HOME/.cyclog.conf
+echo "dunit=$dunit" >> $HOME/.cyclog.conf
 echo "clpath=$clpath" >> $HOME/.cyclog.conf
 echo "editor=$editor" >> $HOME/.cyclog.conf
 echo "browser=$browser" >> $HOME/.cyclog.conf

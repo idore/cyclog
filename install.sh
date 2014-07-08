@@ -13,7 +13,7 @@ if [ != "$HOME/bin/" ]; then
 	export PATH
 fi
 
-rlpath="$HOME/.cyclog/"
+clpath="$HOME/.cyclog/"
 editor="/usr/bin/vim"
 
 echo "installing cyclog ... "
@@ -24,14 +24,20 @@ echo "Creating config files ... "
 echo "# cyclog config " > $HOME/.cyclog.conf
 read -p "Enter your name: " uname
 read -p "Preferred distance unit (miles, km): " dunit
-read -p "Where do you wish to keep your cyclog files? (default ~/.cyclog/ If you choose another directory, do not forget trailing slash.): " rlpath
-read -p "What is your prefered editor? (default /usr/bin/vim): " editor
+read -p "Where do you wish to keep your cyclog files? (default ~/.cyclog/ If you choose another directory, do not forget trailing slash.): " clpat
+if [[ $(echo $clpat) ]]; then
+	clpath=$clpat
+fi
+read -p "What is your prefered editor? (default /usr/bin/vim): " edit
+if [[ $(echo $edit) ]]; then
+	editor=$edit
+fi
 read -p "What is your prefered web browser? (i.e. /usr/bin/iceweasel) " browser
 echo "uname=$uname" >> $HOME/.cyclog.conf
-echo "rlpath=$rlpath" >> $HOME/.cyclog.conf
+echo "clpath=$clpath" >> $HOME/.cyclog.conf
 echo "editor=$editor" >> $HOME/.cyclog.conf
 echo "browser=$browser" >> $HOME/.cyclog.conf
-mkdir $rpath
+mkdir $clpath
 
 read -p "Will you use the redmatrix plugin? (y/n)" rplug
 if [[ $rplug = y ]]; then

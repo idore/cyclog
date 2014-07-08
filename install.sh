@@ -32,15 +32,15 @@ echo "rlpath=$rlpath" >> $HOME/.cyclog.conf
 echo "editor=$editor" >> $HOME/.cyclog.conf
 echo "browser=$browser" >> $HOME/.cyclog.conf
 
-read -p "Will you use the redmatrix plugin? (y/n)" fplug
+read -p "Will you use the redmatrix plugin? (y/n)" rplug
 if [[ $rplug = y ]]; then
-	read -p "Enter your redmatrix username (optional): " fuser
-	read -p "Enter your redmatrix password (optional): " fpass
-	read -p "Enter the url to your redmatrix site (optional): " $fsite
-	echo "fplug=y" >> $HOME/.cyclog.conf
-	echo "fuser=$fuser" >> $HOME/.cyclog.conf
-	echo "fpass=$fpass" >> $HOME/.cyclog.conf
-	echo "fsite=$fsite" >> $HOME/.cyclog.conf
+	read -p "Enter your redmatrix username (optional): " ruser
+	read -p "Enter your redmatrix password (optional): " rpass
+	read -p "Enter the url to your redmatrix site (optional): " $rsite
+	echo "rplug=y" >> $HOME/.cyclog.conf
+	echo "ruser=$ruser" >> $HOME/.cyclog.conf
+	echo "rpass=$rpass" >> $HOME/.cyclog.conf
+	echo "rsite=$rsite" >> $HOME/.cyclog.conf
 else
 	echo "rplug=n0pe" >> $HOME/.cyclog.conf
 fi

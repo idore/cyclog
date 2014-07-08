@@ -37,10 +37,12 @@ if [[ $rplug = y ]]; then
 	read -p "Enter your redmatrix username (optional): " ruser
 	read -p "Enter your redmatrix password (optional): " rpass
 	read -p "Enter the url to your redmatrix site (optional): " $rsite
+	read -p "Channel to post to: " chan
 	echo "rplug=y" >> $HOME/.cyclog.conf
 	echo "ruser=$ruser" >> $HOME/.cyclog.conf
 	echo "rpass=$rpass" >> $HOME/.cyclog.conf
 	echo "rsite=$rsite" >> $HOME/.cyclog.conf
+	echo "chan=$chan" >> $HOME/.cyclog.conf
 else
 	echo "rplug=n0pe" >> $HOME/.cyclog.conf
 fi

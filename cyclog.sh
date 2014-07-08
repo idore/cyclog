@@ -193,18 +193,18 @@ if [[ $rplug = y ]]; then
 		echo -e "#fitness #cycling\nposted with cyclog - http://tonyb.us/cyclog\n----------------\n" >> $clpath/$filedate.ride
 		ud="$(cat $clpath/$filedate.ride)"
 		title="$uname's cyclog"
-		# read -p "Will you be crossposting to other networks? (y/n) " xpo
-		# if [[ $xpo == y ]]; then
+		read -p "Will you be crossposting to other networks? (y/n) " xpo
+		if [[ $xpo == y ]]; then
 			echo "For each of the following, if you wish to xpost to the network, enter 1:"
-		#	read -p "statusnet? " snet
-		#	read -p "friendica? " fd
-		#	read -p "dreamwidth? " dw
-		#	read -p "livejournal? " lj
-		#	read -p "insanejournal?" ij
-		#	read -p "wordpress? " wp
-		#	read -p "libertree? " lt
-		#	read -p "pumpio? " pp
-		# fi
+			read -p "statusnet? " snet
+			read -p "friendica? " fd
+			read -p "dreamwidth? " dw
+			read -p "livejournal? " lj
+			read -p "insanejournal?" ij
+			read -p "wordpress? " wp
+			read -p "libertree? " lt
+			read -p "pumpio? " pp
+		fi
 		cats="cycling,crosstraining,fitness"
 		if [[ $(curl -k -u $ruser:$rpass -d "status=$ud&title=$title&channel=$chan&rtof_enable=$fd&ljpost_enable=$lj&ijpost_enable=$ij&dwpost_enable=$dw&wppost_enable=$wp&libertree_enable=$lt&statusnet_enable=$snet&pumpio_enable=$pp&app=cyclog.sh&category=$cats" $rsite/api/statuses/update.xml | grep error) ]]; then
 			echo "Error!"

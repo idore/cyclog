@@ -38,8 +38,6 @@ cyclog s searchterm - searches for searchterm in ride entries.
 cyclog mo yyyymm - gives a monthly report for month yyyymm 
 cyclog yr yyyy - gives a yearly report for year yyyy (such as cyclog yr 2013)
 cyclog h - displays this help message.
-cyclog ns - add a new shoe.
-cyclog sc - check shoe mileage (sc for shoe check)
 DATES: YYYYMMDD means 4 digit year, 2 digit month, 2 digit day.
 This month is $thismonth, Today is $tday.
 TIMES: Enter time, including hours HH:MM:SS, even if you are doing short rides, under an hour.

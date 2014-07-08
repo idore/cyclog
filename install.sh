@@ -36,7 +36,7 @@ read -p "Will you use the redmatrix plugin? (y/n)" rplug
 if [[ $rplug = y ]]; then
 	read -p "Enter your redmatrix username (optional): " ruser
 	read -p "Enter your redmatrix password (optional): " rpass
-	read -p "Enter the url to your redmatrix site (optional): " $rsite
+	read -p "Enter the url to your redmatrix site (optional): " rsite
 	read -p "Channel to post to: " chan
 	echo "rplug=y" >> $HOME/.cyclog.conf
 	echo "ruser=$ruser" >> $HOME/.cyclog.conf

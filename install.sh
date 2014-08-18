@@ -14,7 +14,7 @@ if [ != "$HOME/bin/" ]; then
 fi
 
 clpath="$HOME/.cyclog/"
-editor="/usr/bin/vim"
+edit="/usr/bin/vim"
 
 echo "installing cyclog ... "
 cp cyclog.sh $HOME/bin/cyclog

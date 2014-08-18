@@ -4,16 +4,11 @@ released according to GPL v. 3
 http://tonyb.us/cyclog
 v. 0.1
 
-cyclog allows you to track the distances, times, and paces, of
-your cycling workouts. 
-I found that there are practically no options for training logs
-or workout tracking for users of Free Software and GNU/Linux.
+cyclog allows you to track the distances, times, and paces, of your cycling workouts. 
+I found that there are practically no options for training logs or workout tracking for users of Free Software and GNU/Linux.
 Well, now there's one.
 
-cyclog can be used to track other workouts, like running, walking, etc., as well,
-I suppose, but there is a runlog at https://github.com/tonybaldwin/runlog
-specifically for running. The main difference between the two is that runlog measures pace 
-as minutes/$distanceunit (min/mile, min/km), whereas cyclog measures $distanceunit/hr (mph, kph).
+cyclog can be used to track other workouts, like running, walking, etc., as well, I suppose, but there is a runlog at https://github.com/tonybaldwin/runlog specifically for running. The main difference between the two is that runlog measures pace as minutes/$distanceunit (min/mile, min/km), whereas cyclog measures $distanceunit/hr (mph, kph).
 Also, runlog allows tracking of mileage on a pair of trainers, weight tracking, and a few other features
 not implemented in cyclog.
 

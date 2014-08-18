@@ -38,13 +38,14 @@ cyclog s searchterm - searches for searchterm in ride entries.
 cyclog mo yyyymm - gives a monthly report for month yyyymm 
 cyclog yr yyyy - gives a yearly report for year yyyy (such as cyclog yr 2013)
 cyclog h - displays this help message.
+--------------------------------------
 DATES: YYYYMMDD means 4 digit year, 2 digit month, 2 digit day.
 This month is $thismonth, Today is $tday.
 TIMES: Enter time, including hours HH:MM:SS, even if you are doing short rides, under an hour.
 i.e. for a 23minute 15second ride: 00:23:15
 Otherwise the math will be all wrong.
 REPORTS: yearly and monthly reports will give you data for
-Total no. of workouts, total distance, total time, average distance, average pace
+Total no. of workouts, total distance, total time, average distance, average speed
 for the time period in question, to date.
 -------------------------------------
 cyclog is released according to GPL v. 3"
@@ -204,9 +205,10 @@ if [[ $rplug = y ]]; then
 			read -p "wordpress? " wp
 			read -p "libertree? " lt
 			read -p "pumpio? " pp
+			read -p "diaspora?? " dia
 		fi
-		cats="cycling,crosstraining,fitness"
-		if [[ $(curl -k -u $ruser:$rpass -d "status=$ud&title=$title&channel=$chan&rtof_enable=$fd&ljpost_enable=$lj&ijpost_enable=$ij&dwpost_enable=$dw&wppost_enable=$wp&libertree_enable=$lt&statusnet_enable=$snet&pumpio_enable=$pp&app=cyclog.sh&category=$cats" $rsite/api/statuses/update.xml | grep error) ]]; then
+		cats="cycling,fitness"
+		if [[ $(curl -k -u $ruser:$rpass -d "status=$ud&title=$title&channel=$chan&rtof_enable=$fd&ljpost_enable=$lj&ijpost_enable=$ij&dwpost_enable=$dw&wppost_enable=$wp&libertree_enable=$lt&statusnet_enable=$snet&pumpio_enable=$pp&diaspora_enable=$dia&source=cyclog.sh&category=$cats" $rsite/api/statuses/update.xml | grep error) ]]; then
 			echo "Error!"
 			exit
 		else
